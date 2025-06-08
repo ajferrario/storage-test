@@ -1,0 +1,38 @@
+bs4k_write100: (g=0): rw=write, bs=(R) 4096B-4096B, (W) 4096B-4096B, (T) 4096B-4096B, ioengine=psync, iodepth=1
+...
+fio-3.33
+Starting 4 processes
+bs4k_write100: Laying out IO file (1 file / 100MiB)
+bs4k_write100: Laying out IO file (1 file / 100MiB)
+bs4k_write100: Laying out IO file (1 file / 100MiB)
+bs4k_write100: Laying out IO file (1 file / 100MiB)
+
+bs4k_write100: (groupid=0, jobs=4): err= 0: pid=2628: Sun Jun  8 19:44:49 2025
+  write: IOPS=1988, BW=7956KiB/s (8146kB/s)(234MiB/30121msec); 0 zone resets
+    clat (usec): min=9, max=8501.3k, avg=2003.11, stdev=74151.41
+     lat (usec): min=9, max=8501.3k, avg=2003.68, stdev=74151.43
+    clat percentiles (usec):
+     |  1.00th=[     10],  5.00th=[     10], 10.00th=[     11],
+     | 20.00th=[     12], 30.00th=[     13], 40.00th=[     13],
+     | 50.00th=[     14], 60.00th=[     15], 70.00th=[     16],
+     | 80.00th=[     20], 90.00th=[     22], 95.00th=[     29],
+     | 99.00th=[    159], 99.50th=[ 135267], 99.90th=[ 173016],
+     | 99.95th=[ 202376], 99.99th=[2566915]
+   bw (  KiB/s): min= 1607, max=232302, per=100.00%, avg=12743.92, stdev=10281.80, samples=150
+   iops        : min=  401, max=58074, avg=3185.36, stdev=2570.43, samples=150
+  lat (usec)   : 10=6.96%, 20=77.41%, 50=13.27%, 100=1.09%, 250=0.31%
+  lat (usec)   : 500=0.05%, 750=0.02%, 1000=0.02%
+  lat (msec)   : 2=0.01%, 4=0.01%, 10=0.02%, 20=0.01%, 100=0.08%
+  lat (msec)   : 250=0.74%, 500=0.01%, 750=0.01%, 2000=0.01%, >=2000=0.01%
+  cpu          : usr=0.25%, sys=0.81%, ctx=631, majf=0, minf=114
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,59907,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+  WRITE: bw=7956KiB/s (8146kB/s), 7956KiB/s-7956KiB/s (8146kB/s-8146kB/s), io=234MiB (245MB), run=30121-30121msec
+
+Disk stats (read/write):
+  mmcblk0: ios=0/252, merge=0/48, ticks=0/1051593, in_queue=1051592, util=94.10%
