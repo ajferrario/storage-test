@@ -1,0 +1,34 @@
+bs1m_read100: (g=0): rw=read, bs=(R) 1024KiB-1024KiB, (W) 1024KiB-1024KiB, (T) 1024KiB-1024KiB, ioengine=psync, iodepth=1
+...
+fio-3.33
+Starting 4 processes
+bs1m_read100: Laying out IO file (1 file / 100MiB)
+bs1m_read100: Laying out IO file (1 file / 100MiB)
+bs1m_read100: Laying out IO file (1 file / 100MiB)
+bs1m_read100: Laying out IO file (1 file / 100MiB)
+
+bs1m_read100: (groupid=0, jobs=4): err= 0: pid=3844: Sun Jun  8 22:29:36 2025
+  read: IOPS=21, BW=21.9MiB/s (23.0MB/s)(661MiB/30134msec)
+    clat (msec): min=70, max=252, avg=181.49, stdev= 7.93
+     lat (msec): min=70, max=252, avg=181.49, stdev= 7.93
+    clat percentiles (msec):
+     |  1.00th=[  163],  5.00th=[  182], 10.00th=[  182], 20.00th=[  182],
+     | 30.00th=[  182], 40.00th=[  182], 50.00th=[  182], 60.00th=[  182],
+     | 70.00th=[  182], 80.00th=[  182], 90.00th=[  182], 95.00th=[  184],
+     | 99.00th=[  190], 99.50th=[  205], 99.90th=[  253], 99.95th=[  253],
+     | 99.99th=[  253]
+   bw (  KiB/s): min=16348, max=24576, per=100.00%, avg=22467.54, stdev=895.51, samples=238
+   iops        : min=   12, max=   24, avg=21.14, stdev= 0.98, samples=238
+  lat (msec)   : 100=0.30%, 250=99.55%, 500=0.15%
+  cpu          : usr=0.03%, sys=1.74%, ctx=1368, majf=0, minf=1110
+  IO depths    : 1=100.0%, 2=0.0%, 4=0.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=661,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=1
+
+Run status group 0 (all jobs):
+   READ: bw=21.9MiB/s (23.0MB/s), 21.9MiB/s-21.9MiB/s (23.0MB/s-23.0MB/s), io=661MiB (693MB), run=30134-30134msec
+
+Disk stats (read/write):
+  mmcblk0: ios=1313/0, merge=0/0, ticks=235101/0, in_queue=235101, util=93.90%
